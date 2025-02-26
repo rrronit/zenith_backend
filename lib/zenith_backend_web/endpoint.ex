@@ -46,6 +46,6 @@ defmodule ZenithBackendWeb.Endpoint do
   plug Plug.MethodOverride
   plug Plug.Head
   plug Plug.Session, @session_options
-  plug ZenithBackendWeb.Router
   plug CORSPlug, origins: ["http://localhost:5173"]
+  plug ZenithBackendWeb.Router
 end
