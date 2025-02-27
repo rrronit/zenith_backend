@@ -19,6 +19,7 @@ import Config
 if System.get_env("PHX_SERVER") do
   config :zenith_backend, ZenithBackendWeb.Endpoint, server: true
 end
+config :zenith_backend, :gemini_api_key, System.fetch_env!("GEMINI_API_KEY")
 
 if config_env() == :prod do
   # The secret key base is used to sign/encrypt cookies and other secrets.

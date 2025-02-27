@@ -7,6 +7,8 @@ defmodule ZenithBackendWeb.Router do
 
   scope "/api", ZenithBackendWeb do
     pipe_through :api
+    post "/generate-shader", ShaderController, :create
+    post "/fix-shader", ShaderController, :fix
   end
 
   # Enable LiveDashboard and Swoosh mailbox preview in development
